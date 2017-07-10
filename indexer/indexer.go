@@ -3,7 +3,7 @@ package indexer
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/antholord/poe-micro/api"
+	"github.com/antholord/poe-ML-indexer/api"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -44,24 +44,14 @@ func Run() bool {
 			var count int = 0
 			for _, stash := range result.PublicStashTabs.Stashes {
 				count += len(stash.Items)
-
 				p.processStash(&stash)
 
 			}
-
-
-			//timeToQuery := time.Now().Sub(lastRequestTime)
-			//log.Println("Processing took : ", timeToQuery)
 			log.Printf("Processing %v items",count)
 		}
 	}()
 	//Update database periodically
-	go func() {
-		for {
-			time.Sleep(updateDelay)
-			//p.updateDB()
-		}
-	}()
+
 	return true
 
 }

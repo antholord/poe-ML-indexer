@@ -11,15 +11,7 @@ import (
 var ModReg *regexp.Regexp = regexp.MustCompile("(?:\\-?\\d*\\.)?\\-?\\d+")
 
 type Parser struct {
-	ModsMap map[string]string
-
-	TypesMap map[string]bool
-	SubCategories map[string]bool
-	TopCategories map[string]bool
-
-	ItemsMap map[string]bool
-
-	IconsMap map[string]string
+	itemBulk []api.Item
 
 	db *db.DB
 
