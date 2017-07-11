@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/antholord/poe-micro/indexer"
+	"github.com/antholord/poe-ML-indexer/indexer"
 	"runtime"
 )
 

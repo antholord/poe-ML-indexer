@@ -42,12 +42,14 @@ func Run() bool {
 				continue
 			}
 			var count int = 0
+
+			var itemSlice []*api.Item
 			for _, stash := range result.PublicStashTabs.Stashes {
 				count += len(stash.Items)
-				p.processStash(&stash)
-
+				p.processStash(&stash, &itemSlice)
 			}
-			log.Printf("Processing %v items",count)
+			log.Printf("Processed %v items",count)
+			p.conn.BulkInsert(itemSlice)
 		}
 	}()
 	//Update database periodically

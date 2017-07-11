@@ -2,17 +2,17 @@
 package api
 
 
-type Socket struct {
-	GroupId   int    `json:"group"`
-	Attribute string `json:"attr"`
+/*type Socket struct {
+	//GroupId   int    //`json:"group"`
+	//Attribute string //`json:"attr"`
 }
 
 type ItemProperty struct {
-	Name        string        `json:"name"`
-	Values      [][]interface{} `json:"values"`
-	DisplayMode int           `json:"displayMode"`
+	//Name        string        //`json:"name"`
+	//Values      [][]interface{} //`json:"values"`
+	//DisplayMode int           //`json:"displayMode"`
 }
-
+*/
 type FrameType int
 
 const (
@@ -31,15 +31,15 @@ const (
 type Item struct {
 	Name string `json:"name"`
 	Type string `json:"typeLine"`
-	FName string
-	FNameUpper string
+	//FName string
+	//FNameUpper string
 
-	Properties   []ItemProperty `json:"properties"`
-	Requirements []ItemProperty `json:"requirements"`
+	//Properties   []ItemProperty //`json:"properties"`
+	//Requirements []ItemProperty //`json:"requirements"`
 
-	Sockets     []Socket `json:"sockets"`
-	NbSockets   int      `json:"nbSockets"`
-	BiggestLink int      `json:"biggestLink"`
+	//Sockets     []Socket //`json:"sockets"`
+	//NbSockets   int      //`json:"nbSockets"`
+	//BiggestLink int      //`json:"biggestLink"`
 
 	ExplicitMods []string `json:"explicitMods"`
 	ImplicitMods []string `json:"implicitMods"`
@@ -51,29 +51,29 @@ type Item struct {
 	Note string `json:"note"`
 
 	IsVerified             bool      `json:"verified"`
-	Width                  int       `json:"w"`
-	Height                 int       `json:"h"`
+	//Width                  int       `json:"w"`
+	//Height                 int       `json:"h"`
 	ItemLevel              int       `json:"ilvl"`
-	Icon                   string    `json:"icon"`
+	//Icon                   string    `json:"icon"`
 	League                 string    `json:"league"`
 	Id                     string    `json:"id"`
 	IsIdentified           bool      `json:"identified"`
-	IsCorrupted            bool      `json:"corrupted"`
-	IsLockedToCharacter    bool      `json:"lockedToCharacter"`
-	IsSupport              bool      `json:"support"`
-	DescriptionText        string    `json:"descrText"`
-	SecondDescriptionText  string    `json:"secDescrText"`
-	FlavorText             []string  `json:"flavourText"`
-	ArtFilename            string    `json:"artFilename"`
+	//IsCorrupted            bool      `json:"corrupted"`
+	//IsLockedToCharacter    bool      `json:"lockedToCharacter"`
+	//IsSupport              bool      `json:"support"`
+	//DescriptionText        string    //`json:"descrText"`
+	//SecondDescriptionText  string    //`json:"secDescrText"`
+	//FlavorText             []string  //`json:"flavourText"`
+	//ArtFilename            string    `json:"artFilename"`
 	FrameType              FrameType `json:"frameType"`
 	StackSize              int       `json:"stackSize"`
 	MaxStackSize           int       `json:"maxStackSize"`
-	X                      int       `json:"x"`
-	Y                      int       `json:"y"`
+	//X                      int       `json:"x"`
+	//Y                      int       `json:"y"`
 	InventoryId            string    `json:"inventoryId"`
-	SocketedItems          []Item    `json:"socketedItems"`
-	IsRelic                bool      `json:"isRelic"`
-	TalismanTier           int       `json:"talismanTier"`
-	ProphecyText           string    `json:"prophecyText"`
-	ProphecyDifficultyText string    `json:"prophecyDiffText"`
+	//SocketedItems          []Item    //`json:"socketedItems"`
+	//IsRelic                bool      //`json:"isRelic"`
+	//TalismanTier           int       //`json:"talismanTier"`
+	//ProphecyText           string    //`json:"prophecyText"`
+	//ProphecyDifficultyText string    //`json:"prophecyDiffText"`
 }

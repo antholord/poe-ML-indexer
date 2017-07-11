@@ -7,7 +7,6 @@ import (
 	easyjson "github.com/mailru/easyjson"
 	jlexer "github.com/mailru/easyjson/jlexer"
 	jwriter "github.com/mailru/easyjson/jwriter"
-	"regexp"
 )
 
 // suppress unused package warning
@@ -16,10 +15,9 @@ var (
 	_ *jlexer.Lexer
 	_ *jwriter.Writer
 	_ easyjson.Marshaler
-	Reg *regexp.Regexp = regexp.MustCompile(`([<<])\S+([>>])`)
 )
 
-func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi(in *jlexer.Lexer, out *PublicStashTabs) {
+func easyjson8cf7917eDecodeGithubComAntholordPoeMLIndexerApi(in *jlexer.Lexer, out *PublicStashTabs) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -57,7 +55,7 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi(in *jlexer.Lexer, out *
 				}
 				for !in.IsDelim(']') {
 					var v1 Stash
-					easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi1(in, &v1)
+					easyjson8cf7917eDecodeGithubComAntholordPoeMLIndexerApi1(in, &v1)
 					out.Stashes = append(out.Stashes, v1)
 					in.WantComma()
 				}
@@ -73,7 +71,7 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi(in *jlexer.Lexer, out *
 		in.Consumed()
 	}
 }
-func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi(out *jwriter.Writer, in PublicStashTabs) {
+func easyjson8cf7917eEncodeGithubComAntholordPoeMLIndexerApi(out *jwriter.Writer, in PublicStashTabs) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -96,7 +94,7 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi(out *jwriter.Writer, in
 			if v2 > 0 {
 				out.RawByte(',')
 			}
-			easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi1(out, v3)
+			easyjson8cf7917eEncodeGithubComAntholordPoeMLIndexerApi1(out, v3)
 		}
 		out.RawByte(']')
 	}
@@ -106,27 +104,27 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi(out *jwriter.Writer, in
 // MarshalJSON supports json.Marshaler interface
 func (v PublicStashTabs) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi(&w, v)
+	easyjson8cf7917eEncodeGithubComAntholordPoeMLIndexerApi(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v PublicStashTabs) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi(w, v)
+	easyjson8cf7917eEncodeGithubComAntholordPoeMLIndexerApi(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *PublicStashTabs) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi(&r, v)
+	easyjson8cf7917eDecodeGithubComAntholordPoeMLIndexerApi(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *PublicStashTabs) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi(l, v)
+	easyjson8cf7917eDecodeGithubComAntholordPoeMLIndexerApi(l, v)
 }
-func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi1(in *jlexer.Lexer, out *Stash) {
+func easyjson8cf7917eDecodeGithubComAntholordPoeMLIndexerApi1(in *jlexer.Lexer, out *Stash) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -172,7 +170,7 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi1(in *jlexer.Lexer, out 
 				}
 				for !in.IsDelim(']') {
 					var v4 Item
-					easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in, &v4)
+					easyjson8cf7917eDecodeGithubComAntholordPoeMLIndexerApi2(in, &v4)
 					out.Items = append(out.Items, v4)
 					in.WantComma()
 				}
@@ -190,7 +188,7 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi1(in *jlexer.Lexer, out 
 		in.Consumed()
 	}
 }
-func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi1(out *jwriter.Writer, in Stash) {
+func easyjson8cf7917eEncodeGithubComAntholordPoeMLIndexerApi1(out *jwriter.Writer, in Stash) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -237,7 +235,7 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi1(out *jwriter.Writer, i
 			if v5 > 0 {
 				out.RawByte(',')
 			}
-			easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out, v6)
+			easyjson8cf7917eEncodeGithubComAntholordPoeMLIndexerApi2(out, v6)
 		}
 		out.RawByte(']')
 	}
@@ -249,7 +247,7 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi1(out *jwriter.Writer, i
 	out.Bool(bool(in.IsPublic))
 	out.RawByte('}')
 }
-func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out *Item) {
+func easyjson8cf7917eDecodeGithubComAntholordPoeMLIndexerApi2(in *jlexer.Lexer, out *Item) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -269,86 +267,9 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out 
 		}
 		switch key {
 		case "name":
-			out.Name = Reg.ReplaceAllString(string(in.String()), "")
+			out.Name = string(in.String())
 		case "typeLine":
-			out.Type = Reg.ReplaceAllString(string(in.String()), "")
-		case "FName":
-			out.FName = string(in.String())
-		case "FNameUpper":
-			out.FNameUpper = string(in.String())
-		case "properties":
-			if in.IsNull() {
-				in.Skip()
-				out.Properties = nil
-			} else {
-				in.Delim('[')
-				if out.Properties == nil {
-					if !in.IsDelim(']') {
-						out.Properties = make([]ItemProperty, 0, 1)
-					} else {
-						out.Properties = []ItemProperty{}
-					}
-				} else {
-					out.Properties = (out.Properties)[:0]
-				}
-				for !in.IsDelim(']') {
-					var v7 ItemProperty
-					easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi3(in, &v7)
-					out.Properties = append(out.Properties, v7)
-					in.WantComma()
-				}
-				in.Delim(']')
-			}
-		case "requirements":
-			if in.IsNull() {
-				in.Skip()
-				out.Requirements = nil
-			} else {
-				in.Delim('[')
-				if out.Requirements == nil {
-					if !in.IsDelim(']') {
-						out.Requirements = make([]ItemProperty, 0, 1)
-					} else {
-						out.Requirements = []ItemProperty{}
-					}
-				} else {
-					out.Requirements = (out.Requirements)[:0]
-				}
-				for !in.IsDelim(']') {
-					var v8 ItemProperty
-					easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi3(in, &v8)
-					out.Requirements = append(out.Requirements, v8)
-					in.WantComma()
-				}
-				in.Delim(']')
-			}
-		case "sockets":
-			if in.IsNull() {
-				in.Skip()
-				out.Sockets = nil
-			} else {
-				in.Delim('[')
-				if out.Sockets == nil {
-					if !in.IsDelim(']') {
-						out.Sockets = make([]Socket, 0, 2)
-					} else {
-						out.Sockets = []Socket{}
-					}
-				} else {
-					out.Sockets = (out.Sockets)[:0]
-				}
-				for !in.IsDelim(']') {
-					var v9 Socket
-					easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi4(in, &v9)
-					out.Sockets = append(out.Sockets, v9)
-					in.WantComma()
-				}
-				in.Delim(']')
-			}
-		case "nbSockets":
-			out.NbSockets = int(in.Int())
-		case "biggestLink":
-			out.BiggestLink = int(in.Int())
+			out.Type = string(in.String())
 		case "explicitMods":
 			if in.IsNull() {
 				in.Skip()
@@ -365,9 +286,9 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out 
 					out.ExplicitMods = (out.ExplicitMods)[:0]
 				}
 				for !in.IsDelim(']') {
-					var v10 string
-					v10 = string(in.String())
-					out.ExplicitMods = append(out.ExplicitMods, v10)
+					var v7 string
+					v7 = string(in.String())
+					out.ExplicitMods = append(out.ExplicitMods, v7)
 					in.WantComma()
 				}
 				in.Delim(']')
@@ -388,9 +309,9 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out 
 					out.ImplicitMods = (out.ImplicitMods)[:0]
 				}
 				for !in.IsDelim(']') {
-					var v11 string
-					v11 = string(in.String())
-					out.ImplicitMods = append(out.ImplicitMods, v11)
+					var v8 string
+					v8 = string(in.String())
+					out.ImplicitMods = append(out.ImplicitMods, v8)
 					in.WantComma()
 				}
 				in.Delim(']')
@@ -411,9 +332,9 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out 
 					out.UtilityMods = (out.UtilityMods)[:0]
 				}
 				for !in.IsDelim(']') {
-					var v12 string
-					v12 = string(in.String())
-					out.UtilityMods = append(out.UtilityMods, v12)
+					var v9 string
+					v9 = string(in.String())
+					out.UtilityMods = append(out.UtilityMods, v9)
 					in.WantComma()
 				}
 				in.Delim(']')
@@ -434,9 +355,9 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out 
 					out.EnchantMods = (out.EnchantMods)[:0]
 				}
 				for !in.IsDelim(']') {
-					var v13 string
-					v13 = string(in.String())
-					out.EnchantMods = append(out.EnchantMods, v13)
+					var v10 string
+					v10 = string(in.String())
+					out.EnchantMods = append(out.EnchantMods, v10)
 					in.WantComma()
 				}
 				in.Delim(']')
@@ -457,9 +378,9 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out 
 					out.CraftedMods = (out.CraftedMods)[:0]
 				}
 				for !in.IsDelim(']') {
-					var v14 string
-					v14 = string(in.String())
-					out.CraftedMods = append(out.CraftedMods, v14)
+					var v11 string
+					v11 = string(in.String())
+					out.CraftedMods = append(out.CraftedMods, v11)
 					in.WantComma()
 				}
 				in.Delim(']')
@@ -480,9 +401,9 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out 
 					out.CosmeticMods = (out.CosmeticMods)[:0]
 				}
 				for !in.IsDelim(']') {
-					var v15 string
-					v15 = string(in.String())
-					out.CosmeticMods = append(out.CosmeticMods, v15)
+					var v12 string
+					v12 = string(in.String())
+					out.CosmeticMods = append(out.CosmeticMods, v12)
 					in.WantComma()
 				}
 				in.Delim(']')
@@ -491,98 +412,22 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out 
 			out.Note = string(in.String())
 		case "verified":
 			out.IsVerified = bool(in.Bool())
-		case "w":
-			out.Width = int(in.Int())
-		case "h":
-			out.Height = int(in.Int())
 		case "ilvl":
 			out.ItemLevel = int(in.Int())
-		case "icon":
-			out.Icon = string(in.String())
 		case "league":
 			out.League = string(in.String())
 		case "id":
 			out.Id = string(in.String())
 		case "identified":
 			out.IsIdentified = bool(in.Bool())
-		case "corrupted":
-			out.IsCorrupted = bool(in.Bool())
-		case "lockedToCharacter":
-			out.IsLockedToCharacter = bool(in.Bool())
-		case "support":
-			out.IsSupport = bool(in.Bool())
-		case "descrText":
-			out.DescriptionText = string(in.String())
-		case "secDescrText":
-			out.SecondDescriptionText = string(in.String())
-		case "flavourText":
-			if in.IsNull() {
-				in.Skip()
-				out.FlavorText = nil
-			} else {
-				in.Delim('[')
-				if out.FlavorText == nil {
-					if !in.IsDelim(']') {
-						out.FlavorText = make([]string, 0, 4)
-					} else {
-						out.FlavorText = []string{}
-					}
-				} else {
-					out.FlavorText = (out.FlavorText)[:0]
-				}
-				for !in.IsDelim(']') {
-					var v16 string
-					v16 = string(in.String())
-					out.FlavorText = append(out.FlavorText, v16)
-					in.WantComma()
-				}
-				in.Delim(']')
-			}
-		case "artFilename":
-			out.ArtFilename = string(in.String())
 		case "frameType":
 			out.FrameType = FrameType(in.Int())
 		case "stackSize":
 			out.StackSize = int(in.Int())
 		case "maxStackSize":
 			out.MaxStackSize = int(in.Int())
-		case "x":
-			out.X = int(in.Int())
-		case "y":
-			out.Y = int(in.Int())
 		case "inventoryId":
 			out.InventoryId = string(in.String())
-		case "socketedItems":
-			if in.IsNull() {
-				in.Skip()
-				out.SocketedItems = nil
-			} else {
-				in.Delim('[')
-				if out.SocketedItems == nil {
-					if !in.IsDelim(']') {
-						out.SocketedItems = make([]Item, 0, 1)
-					} else {
-						out.SocketedItems = []Item{}
-					}
-				} else {
-					out.SocketedItems = (out.SocketedItems)[:0]
-				}
-				for !in.IsDelim(']') {
-					var v17 Item
-					easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in, &v17)
-					out.SocketedItems = append(out.SocketedItems, v17)
-					in.WantComma()
-				}
-				in.Delim(']')
-			}
-		case "isRelic":
-			out.IsRelic = bool(in.Bool())
-		case "talismanTier":
-			out.TalismanTier = int(in.Int())
-		case "prophecyText":
-			out.ProphecyText = string(in.String())
-		case "prophecyDiffText":
-			out.ProphecyDifficultyText = string(in.String())
 		default:
 			in.SkipRecursive()
 		}
@@ -593,7 +438,7 @@ func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi2(in *jlexer.Lexer, out 
 		in.Consumed()
 	}
 }
-func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, in Item) {
+func easyjson8cf7917eEncodeGithubComAntholordPoeMLIndexerApi2(out *jwriter.Writer, in Item) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -613,91 +458,16 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, i
 		out.RawByte(',')
 	}
 	first = false
-	out.RawString("\"FName\":")
-	out.String(string(in.FName))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"FNameUpper\":")
-	out.String(string(in.FNameUpper))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"properties\":")
-	if in.Properties == nil && (out.Flags&jwriter.NilSliceAsEmpty) == 0 {
-		out.RawString("null")
-	} else {
-		out.RawByte('[')
-		for v18, v19 := range in.Properties {
-			if v18 > 0 {
-				out.RawByte(',')
-			}
-			easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi3(out, v19)
-		}
-		out.RawByte(']')
-	}
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"requirements\":")
-	if in.Requirements == nil && (out.Flags&jwriter.NilSliceAsEmpty) == 0 {
-		out.RawString("null")
-	} else {
-		out.RawByte('[')
-		for v20, v21 := range in.Requirements {
-			if v20 > 0 {
-				out.RawByte(',')
-			}
-			easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi3(out, v21)
-		}
-		out.RawByte(']')
-	}
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"sockets\":")
-	if in.Sockets == nil && (out.Flags&jwriter.NilSliceAsEmpty) == 0 {
-		out.RawString("null")
-	} else {
-		out.RawByte('[')
-		for v22, v23 := range in.Sockets {
-			if v22 > 0 {
-				out.RawByte(',')
-			}
-			easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi4(out, v23)
-		}
-		out.RawByte(']')
-	}
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"nbSockets\":")
-	out.Int(int(in.NbSockets))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"biggestLink\":")
-	out.Int(int(in.BiggestLink))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
 	out.RawString("\"explicitMods\":")
 	if in.ExplicitMods == nil && (out.Flags&jwriter.NilSliceAsEmpty) == 0 {
 		out.RawString("null")
 	} else {
 		out.RawByte('[')
-		for v24, v25 := range in.ExplicitMods {
-			if v24 > 0 {
+		for v13, v14 := range in.ExplicitMods {
+			if v13 > 0 {
 				out.RawByte(',')
 			}
-			out.String(string(v25))
+			out.String(string(v14))
 		}
 		out.RawByte(']')
 	}
@@ -710,11 +480,11 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, i
 		out.RawString("null")
 	} else {
 		out.RawByte('[')
-		for v26, v27 := range in.ImplicitMods {
-			if v26 > 0 {
+		for v15, v16 := range in.ImplicitMods {
+			if v15 > 0 {
 				out.RawByte(',')
 			}
-			out.String(string(v27))
+			out.String(string(v16))
 		}
 		out.RawByte(']')
 	}
@@ -727,11 +497,11 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, i
 		out.RawString("null")
 	} else {
 		out.RawByte('[')
-		for v28, v29 := range in.UtilityMods {
-			if v28 > 0 {
+		for v17, v18 := range in.UtilityMods {
+			if v17 > 0 {
 				out.RawByte(',')
 			}
-			out.String(string(v29))
+			out.String(string(v18))
 		}
 		out.RawByte(']')
 	}
@@ -744,11 +514,11 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, i
 		out.RawString("null")
 	} else {
 		out.RawByte('[')
-		for v30, v31 := range in.EnchantMods {
-			if v30 > 0 {
+		for v19, v20 := range in.EnchantMods {
+			if v19 > 0 {
 				out.RawByte(',')
 			}
-			out.String(string(v31))
+			out.String(string(v20))
 		}
 		out.RawByte(']')
 	}
@@ -761,11 +531,11 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, i
 		out.RawString("null")
 	} else {
 		out.RawByte('[')
-		for v32, v33 := range in.CraftedMods {
-			if v32 > 0 {
+		for v21, v22 := range in.CraftedMods {
+			if v21 > 0 {
 				out.RawByte(',')
 			}
-			out.String(string(v33))
+			out.String(string(v22))
 		}
 		out.RawByte(']')
 	}
@@ -778,11 +548,11 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, i
 		out.RawString("null")
 	} else {
 		out.RawByte('[')
-		for v34, v35 := range in.CosmeticMods {
-			if v34 > 0 {
+		for v23, v24 := range in.CosmeticMods {
+			if v23 > 0 {
 				out.RawByte(',')
 			}
-			out.String(string(v35))
+			out.String(string(v24))
 		}
 		out.RawByte(']')
 	}
@@ -802,26 +572,8 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, i
 		out.RawByte(',')
 	}
 	first = false
-	out.RawString("\"w\":")
-	out.Int(int(in.Width))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"h\":")
-	out.Int(int(in.Height))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
 	out.RawString("\"ilvl\":")
 	out.Int(int(in.ItemLevel))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"icon\":")
-	out.String(string(in.Icon))
 	if !first {
 		out.RawByte(',')
 	}
@@ -844,59 +596,6 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, i
 		out.RawByte(',')
 	}
 	first = false
-	out.RawString("\"corrupted\":")
-	out.Bool(bool(in.IsCorrupted))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"lockedToCharacter\":")
-	out.Bool(bool(in.IsLockedToCharacter))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"support\":")
-	out.Bool(bool(in.IsSupport))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"descrText\":")
-	out.String(string(in.DescriptionText))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"secDescrText\":")
-	out.String(string(in.SecondDescriptionText))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"flavourText\":")
-	if in.FlavorText == nil && (out.Flags&jwriter.NilSliceAsEmpty) == 0 {
-		out.RawString("null")
-	} else {
-		out.RawByte('[')
-		for v36, v37 := range in.FlavorText {
-			if v36 > 0 {
-				out.RawByte(',')
-			}
-			out.String(string(v37))
-		}
-		out.RawByte(']')
-	}
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"artFilename\":")
-	out.String(string(in.ArtFilename))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
 	out.RawString("\"frameType\":")
 	out.Int(int(in.FrameType))
 	if !first {
@@ -915,246 +614,7 @@ func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out *jwriter.Writer, i
 		out.RawByte(',')
 	}
 	first = false
-	out.RawString("\"x\":")
-	out.Int(int(in.X))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"y\":")
-	out.Int(int(in.Y))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
 	out.RawString("\"inventoryId\":")
 	out.String(string(in.InventoryId))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"socketedItems\":")
-	if in.SocketedItems == nil && (out.Flags&jwriter.NilSliceAsEmpty) == 0 {
-		out.RawString("null")
-	} else {
-		out.RawByte('[')
-		for v38, v39 := range in.SocketedItems {
-			if v38 > 0 {
-				out.RawByte(',')
-			}
-			easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi2(out, v39)
-		}
-		out.RawByte(']')
-	}
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"isRelic\":")
-	out.Bool(bool(in.IsRelic))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"talismanTier\":")
-	out.Int(int(in.TalismanTier))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"prophecyText\":")
-	out.String(string(in.ProphecyText))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"prophecyDiffText\":")
-	out.String(string(in.ProphecyDifficultyText))
-	out.RawByte('}')
-}
-func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi4(in *jlexer.Lexer, out *Socket) {
-	isTopLevel := in.IsStart()
-	if in.IsNull() {
-		if isTopLevel {
-			in.Consumed()
-		}
-		in.Skip()
-		return
-	}
-	in.Delim('{')
-	for !in.IsDelim('}') {
-		key := in.UnsafeString()
-		in.WantColon()
-		if in.IsNull() {
-			in.Skip()
-			in.WantComma()
-			continue
-		}
-		switch key {
-		case "group":
-			out.GroupId = int(in.Int())
-		case "attr":
-			out.Attribute = string(in.String())
-		default:
-			in.SkipRecursive()
-		}
-		in.WantComma()
-	}
-	in.Delim('}')
-	if isTopLevel {
-		in.Consumed()
-	}
-}
-func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi4(out *jwriter.Writer, in Socket) {
-	out.RawByte('{')
-	first := true
-	_ = first
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"group\":")
-	out.Int(int(in.GroupId))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"attr\":")
-	out.String(string(in.Attribute))
-	out.RawByte('}')
-}
-func easyjson8cf7917eDecodeGithubComAntholordPoeMicroApi3(in *jlexer.Lexer, out *ItemProperty) {
-	isTopLevel := in.IsStart()
-	if in.IsNull() {
-		if isTopLevel {
-			in.Consumed()
-		}
-		in.Skip()
-		return
-	}
-	in.Delim('{')
-	for !in.IsDelim('}') {
-		key := in.UnsafeString()
-		in.WantColon()
-		if in.IsNull() {
-			in.Skip()
-			in.WantComma()
-			continue
-		}
-		switch key {
-		case "name":
-			out.Name = string(in.String())
-		case "values":
-			if in.IsNull() {
-				in.Skip()
-				out.Values = nil
-			} else {
-				in.Delim('[')
-				if out.Values == nil {
-					if !in.IsDelim(']') {
-						out.Values = make([][]interface{}, 0, 2)
-					} else {
-						out.Values = [][]interface{}{}
-					}
-				} else {
-					out.Values = (out.Values)[:0]
-				}
-				for !in.IsDelim(']') {
-					var v40 []interface{}
-					if in.IsNull() {
-						in.Skip()
-						v40 = nil
-					} else {
-						in.Delim('[')
-						if v40 == nil {
-							if !in.IsDelim(']') {
-								v40 = make([]interface{}, 0, 4)
-							} else {
-								v40 = []interface{}{}
-							}
-						} else {
-							v40 = (v40)[:0]
-						}
-						for !in.IsDelim(']') {
-							var v41 interface{}
-							if m, ok := v41.(easyjson.Unmarshaler); ok {
-								m.UnmarshalEasyJSON(in)
-							} else if m, ok := v41.(json.Unmarshaler); ok {
-								m.UnmarshalJSON(in.Raw())
-							} else {
-								v41 = in.Interface()
-							}
-							v40 = append(v40, v41)
-							in.WantComma()
-						}
-						in.Delim(']')
-					}
-					out.Values = append(out.Values, v40)
-					in.WantComma()
-				}
-				in.Delim(']')
-			}
-		case "displayMode":
-			out.DisplayMode = int(in.Int())
-		default:
-			in.SkipRecursive()
-		}
-		in.WantComma()
-	}
-	in.Delim('}')
-	if isTopLevel {
-		in.Consumed()
-	}
-}
-func easyjson8cf7917eEncodeGithubComAntholordPoeMicroApi3(out *jwriter.Writer, in ItemProperty) {
-	out.RawByte('{')
-	first := true
-	_ = first
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"name\":")
-	out.String(string(in.Name))
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"values\":")
-	if in.Values == nil && (out.Flags&jwriter.NilSliceAsEmpty) == 0 {
-		out.RawString("null")
-	} else {
-		out.RawByte('[')
-		for v42, v43 := range in.Values {
-			if v42 > 0 {
-				out.RawByte(',')
-			}
-			if v43 == nil && (out.Flags&jwriter.NilSliceAsEmpty) == 0 {
-				out.RawString("null")
-			} else {
-				out.RawByte('[')
-				for v44, v45 := range v43 {
-					if v44 > 0 {
-						out.RawByte(',')
-					}
-					if m, ok := v45.(easyjson.Marshaler); ok {
-						m.MarshalEasyJSON(out)
-					} else if m, ok := v45.(json.Marshaler); ok {
-						out.Raw(m.MarshalJSON())
-					} else {
-						out.Raw(json.Marshal(v45))
-					}
-				}
-				out.RawByte(']')
-			}
-		}
-		out.RawByte(']')
-	}
-	if !first {
-		out.RawByte(',')
-	}
-	first = false
-	out.RawString("\"displayMode\":")
-	out.Int(int(in.DisplayMode))
 	out.RawByte('}')
 }
